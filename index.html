@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="esn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Pokemon</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Comparador de Pokemon</h1>
+    </header>
+
+    <main>
+        <!-- FORM -->
+        <section>
+            <div class="form-container">
+                <p>Ingresa los nombres de dos Pokemon para compararlos:</p>
+                <form>
+                    <input id="input-one" type="text" placeholder="Pokemon 1" required>
+                    <input id="input-two" type="text" placeholder="Pokemon 2" required>
+                    <button id="submit-button" type="submit">Comparar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- CHART -->
+        <section>
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <!-- ChartJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- myChart script -->
+    <script src="assets/js/app.js" type="module"></script>
+
+</body>
+</html>
