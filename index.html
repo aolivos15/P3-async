@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparador de Pokemon</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Signika+Negative&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Comparador de Pokemon</h1>
+        <h1>Comparador de estadísticas de Pokemon</h1>
     </header>
 
     <main>
         <!-- FORM -->
         <section>
             <div class="form-container">
-                <p>Ingresa los nombres de dos Pokemon para compararlos:</p>
+                <p>Ingresa los nombres de dos Pokemon para comparar sus estadísticas:</p>
                 <form>
                     <input id="input-one" type="text" placeholder="Pokemon 1" required>
                     <input id="input-two" type="text" placeholder="Pokemon 2" required>
-                    <button id="submit-button" type="submit">Comparar</button>
+                    <button id="submit-button" class="button" type="submit">Comparar</button>
                 </form>
             </div>
         </section>
@@ -27,7 +30,7 @@
         <!-- CHART -->
         <section>
             <div class="chart-container">
-                <canvas id="myChart"></canvas>
+                <canvas id="myChart" aria-label="Comparando estadísticas de dos Pokemon" role="img"></canvas>
             </div>
         </section>
     </main>

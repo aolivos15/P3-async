@@ -1,6 +1,8 @@
 const ctx = document.getElementById('myChart');
 let chart; // Variable to store the chart, must be global
 
+Chart.defaults.font.size = 16;
+
 export const createChart = (pokemon1, pokemon2) => {
 
     // If there is already a chart on the page, destroy it before creating a new one
@@ -20,13 +22,20 @@ export const createChart = (pokemon1, pokemon2) => {
                 {
                     label: pokemon1.name,
                     data: pokemon1.stats.map((element) => element.base_stat),
-                    backgroundColor: 'rgb(255, 201, 222)',
+                    borderWidth: 2,
+                    borderColor: '#f576a6',
+                    backgroundColor: '#ffc9de',
                 },
             {
                 label: pokemon2.name,
                 data: pokemon2.stats.map((element) => element.base_stat),
-                backgroundColor: 'rgb(178, 228, 240)',
+                borderWidth: 2,
+                borderColor: '#40b1ce',
+                backgroundColor: '#b2e4f0',
             }]
+        },
+        options: {
+            maintainAspectRatio: false,
         }
     });
 }
