@@ -1,4 +1,5 @@
 import { createChart } from "./createChart.js";
+import { displayCards } from "./displayCards.js";
 
 // Selecting elements from the page
 const input1 = document.getElementById('input-one');
@@ -42,6 +43,8 @@ button.addEventListener('click', async (event) => {
     let data1 = await getPokemonData(query1);
     let data2 = await getPokemonData(query2);
 
+    // Display images of the selected pokemon
+    displayCards(data1, data2);
     // Create a chart with the obtained pokemon data
     createChart(data1, data2);
 
